@@ -135,6 +135,12 @@
     .contact { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:30px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
     .contact h2 { margin:0 0 8px; font-size:clamp(24px,4vw,34px); }
     .contact p { margin:0; color:var(--muted); font-size:13px; }
+    .contact-details { width:min(100%, 420px); display:grid; gap:12px; }
+    .contact-row { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.025); }
+    .contact-label { display:block; color:var(--muted); font-size:11px; margin-bottom:3px; }
+    .contact-row strong { display:block; font-size:15px; font-weight:650; letter-spacing:.02em; }
+    .copy-btn { background:transparent; color:var(--text); cursor:pointer; font:inherit; white-space:nowrap; }
+    .copy-btn:hover { color:var(--accent); }
     footer { padding:28px 0 36px; border-top:1px solid var(--line); color:#747c89; font-size:11px; }
     @media (max-width:760px) {
       .wrap { width:min(var(--max), calc(100% - 30px)); }
@@ -153,6 +159,8 @@
       .showcase-info strong { font-size:15px; }
       .about-grid { grid-template-columns:1fr; gap:20px; }
       .contact { align-items:flex-start; flex-direction:column; padding:24px; }
+      .contact-details { width:100%; }
+      .contact-row { padding:12px; }
     }
   </style>
 </head>
@@ -355,10 +363,25 @@
       <div class="contact">
         <div>
           <div class="eyebrow">CONTACT</div>
-          <h2>有项目或岗位机会？</h2>
-          <p>欢迎联系交流。发布前请将下方邮箱替换成你实际使用的联系方式。</p>
+          <h2>联系方式</h2>
+          <p>微信与电话，方便联系沟通。</p>
         </div>
-        <a class="btn primary" href="mailto:your-email@example.com">your-email@example.com ↗</a>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div>
+              <span class="contact-label">微信</span>
+              <strong id="wechat-value">zkz2106</strong>
+            </div>
+            <button class="btn copy-btn" type="button" data-copy="wechat-value">复制微信号</button>
+          </div>
+          <div class="contact-row">
+            <div>
+              <span class="contact-label">手机号</span>
+              <strong id="phone-value">17386366601</strong>
+            </div>
+            <button class="btn copy-btn" type="button" data-copy="phone-value">复制手机号</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -368,6 +391,19 @@
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      button.addEventListener("click", async function () {
+        const value = document.getElementById(button.getAttribute("data-copy")).textContent.trim();
+        try {
+          await navigator.clipboard.writeText(value);
+          const originalText = button.textContent;
+          button.textContent = "已复制";
+          window.setTimeout(function () { button.textContent = originalText; }, 1400);
+        } catch (error) {
+          window.prompt("请手动复制：", value);
+        }
+      });
+    });
   </script>
 </body>
 </html>
