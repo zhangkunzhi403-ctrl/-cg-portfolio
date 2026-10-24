@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="游戏 CG / PV 后期作品集，展示灯光、渲染、合成与调色项目经验。">
-  <title>CG / PV Portfolio — 作品集</title>
+  <meta name="description" content="张昆志的游戏 CG / PV 视觉制作作品集，展示灯光、渲染、合成与调色项目经验。">
+  <title>张昆志｜游戏 CG 视觉制作作品集</title>
   <style>
     :root {
       --bg: #0a0b0e;
@@ -13,8 +13,8 @@
       --text: #f1f2f4;
       --muted: #a0a7b4;
       --line: rgba(255,255,255,.12);
-      --accent: #c7f36b;
-      --accent-2: #9fbf50;
+      --accent: #c6a879;
+      --accent-2: #a88c63;
       --max: 1160px;
     }
     * { box-sizing: border-box; }
@@ -80,6 +80,16 @@
       border:1px solid rgba(255,255,255,.12); border-radius:50%;
       transform:rotate(-28deg); box-shadow:0 0 0 28px rgba(255,255,255,.018), 0 0 0 58px rgba(255,255,255,.015);
     }
+    .art-cover::after { display:none; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+    .hero .btn { padding:11px 17px; font-size:13px; }
+    .hero .btn.secondary { background:transparent; color:var(--text); }
+    .hero .btn.secondary:hover { background:rgba(255,255,255,.05); }
+    .section-kicker { color:var(--muted); font-size:11px; letter-spacing:.14em; margin-bottom:10px; }
+    .project-body p { min-height:42px; }
+    .hero-name { color:#fff; }
+    .hero-role { color:var(--accent); }
+    .hero-copy { font-size:16px; line-height:1.85; }
     .project:nth-child(2) .art {
       background:radial-gradient(ellipse at 65% 20%, rgba(221,181,120,.26), transparent 25%),
       radial-gradient(ellipse at 20% 75%, rgba(98,130,156,.25), transparent 32%),
@@ -170,7 +180,6 @@
       <a class="brand" href="#top">CG / PV PORTFOLIO</a>
       <div class="nav-links">
         <a href="#works">作品案例</a>
-        <a href="#showcase">作品展示</a>
         <a href="#about">关于我</a>
         <a href="#contact">联系</a>
       </div>
@@ -180,13 +189,14 @@
   <main id="top">
     <div class="wrap hero">
       <div>
-        <div class="eyebrow">GAME CINEMATIC · POST-PRODUCTION</div>
-        <h1>把画面打磨到<br><span>最后一帧。</span></h1>
-        <p class="hero-copy">游戏 CG / PV 后期制作作品集。主要参与灯光、渲染、合成与调色，关注画面氛围、层次和最终成片质量。</p>
+        <div class="eyebrow">GAME CINEMATIC · VISUAL PRODUCTION</div>
+        <h1><span class="hero-name">张昆志</span><br><span class="hero-role">游戏 CG 视觉制作</span></h1>
+        <p class="hero-copy">游戏 CG / PV 作品集。参与灯光、渲染、合成与调色等画面制作环节，关注镜头氛围、光影层次与最终成片的统一性。</p>
+        <div class="hero-actions"><a class="btn primary" href="#works">查看项目案例 ↓</a><a class="btn secondary" href="#contact">联系我 ↗</a></div>
       </div>
       <aside class="hero-side">
-        <strong>制作方向</strong>
-        <p>CG Lighting · Rendering · Compositing · Color Grading</p>
+        <strong>核心制作环节</strong>
+        <p>Lighting · Rendering · Compositing · Color Grading</p>
         <div class="chips">
           <span class="chip">Maya</span>
           <span class="chip">Nuke</span>
@@ -202,7 +212,7 @@
           <div class="eyebrow">SELECTED WORKS / 04</div>
           <h2>项目案例</h2>
         </div>
-        <p>以下列出参与过的真实项目与个人负责环节。点击“观看成片”可跳转至对应的 B 站视频。</p>
+        <p>精选已公开项目，并明确标注本人实际负责的制作环节。点击按钮可观看完整成片。</p>
       </div>
 
       <div class="project-grid">
@@ -288,54 +298,6 @@
       </div>
     </section>
 
-    <section id="showcase" class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">SHOWREEL / VIDEO GALLERY</div>
-          <h2>作品展示</h2>
-        </div>
-        <p>集中浏览四个真实项目的成片。点击任意作品可在 B 站打开完整视频。</p>
-      </div>
-      <div class="showcase-list">
-        <a class="showcase-item" href="https://www.bilibili.com/video/BV1ub4y1h7KM/" target="_blank" rel="noopener noreferrer">
-          <div class="showcase-thumb"><img src="covers/cfm.png" alt="" loading="lazy"></div><div class="showcase-index">01</div>
-          <div class="showcase-info">
-            <span>CFM · GAME CINEMATIC</span>
-            <strong>穿越火线：枪战王者</strong>
-            <small>灯光 / 渲染 / 合成 / 调色</small>
-          </div>
-          <span class="showcase-open">观看成片 ↗</span>
-        </a>
-        <a class="showcase-item" href="https://www.bilibili.com/video/BV1M9yfB4EsG/" target="_blank" rel="noopener noreferrer">
-          <div class="showcase-thumb"><img src="covers/yanyun.png" alt="" loading="lazy"></div><div class="showcase-index">02</div>
-          <div class="showcase-info">
-            <span>YANYUN · CINEMATIC</span>
-            <strong>燕云十六声｜月儿弯弯照秦川</strong>
-            <small>灯光 / 渲染 / 合成 / 景深特效 / 调色</small>
-          </div>
-          <span class="showcase-open">观看成片 ↗</span>
-        </a>
-        <a class="showcase-item" href="https://www.bilibili.com/video/BV1GAU6BWE5c/" target="_blank" rel="noopener noreferrer">
-          <div class="showcase-thumb"><img src="covers/identityv.png" alt="" loading="lazy"></div><div class="showcase-index">03</div>
-          <div class="showcase-info">
-            <span>IDENTITY V · ANIMATION</span>
-            <strong>第五人格｜主线剧情变身动画</strong>
-            <small>灯光 / 合成</small>
-          </div>
-          <span class="showcase-open">观看成片 ↗</span>
-        </a>
-        <a class="showcase-item" href="https://www.bilibili.com/video/BV1fspq6cEty/" target="_blank" rel="noopener noreferrer">
-          <div class="showcase-thumb"><img src="covers/endfield.png" alt="" loading="lazy"></div><div class="showcase-index">04</div>
-          <div class="showcase-info">
-            <span>ARKNIGHTS: ENDFIELD · CHARACTER STORY</span>
-            <strong>明日方舟：终末地｜祀：洒扫庭除</strong>
-            <small>渲染 / 合成 / 调色 / 景深</small>
-          </div>
-          <span class="showcase-open">观看成片 ↗</span>
-        </a>
-      </div>
-    </section>
-
     <section id="about" class="wrap">
       <div class="about-grid">
         <div>
@@ -343,8 +305,8 @@
           <h2>关于我</h2>
         </div>
         <div class="about-copy">
-          <p>专注于游戏 CG / PV 画面制作与后期流程，具备多环节协作经验。重视镜头最终呈现、画面氛围、明暗层次与成片统一性。</p>
-          <p>作品展示以公开成片为主，并标注本人实际负责的制作环节，便于招聘方快速了解项目经验。</p>
+          <p>我的工作方向是游戏 CG / PV 视觉制作，项目经验覆盖灯光、渲染、合成、调色及部分景深处理。</p>
+          <p>我重视镜头最终呈现、光影关系、画面层次与整体色调统一。页面仅展示公开成片，并按实际参与情况列出个人职责。</p>
           <div class="skill-list">
             <span class="skill">Maya</span>
             <span class="skill">Nuke</span>
